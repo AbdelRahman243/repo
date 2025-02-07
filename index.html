@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Tracker</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center min-h-screen">
+    <div class="container mx-auto p-6">
+        <header class="bg-gray-800 p-4 rounded-xl shadow-lg flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Asteroid Tracker</h1>
+            <button id="fetchData" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow">Fetch Data</button>
+        </header>
+        <main class="mt-6">
+            <div class="stats grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-800 p-4 rounded-xl shadow-lg">
+                <p><strong>Total Asteroids:</strong> <span id="totalCount" class="text-blue-400">0</span></p>
+                <p><strong>Average Diameter:</strong> <span id="avgDiameter" class="text-green-400">0 km</span></p>
+                <p><strong>Potentially Hazardous:</strong> <span id="hazardousCount" class="text-red-400">0</span></p>
+            </div>
+            <div class="asteroid-list mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="asteroidList"></div>
+        </main>
+    </div>
+    <script src="ui.js"></script>
+</body>
+</html>
